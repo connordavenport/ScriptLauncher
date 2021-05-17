@@ -136,13 +136,13 @@ class scriptLauncher(object):
 			newPath = GetFolder()
 			if newPath != None:
 				self.extensionsDirectory = newPath
-				self.d.extensions_path = newPath
+				self.d.extensions_path.set(newPath)
 				self.searchExtensionsDirectory(newPath)
 		elif sender.getTitle() == "Scripts":
 			newPath = GetFolder()
 			if newPath != None:
 				self.scriptsDirectory = newPath
-				self.d.scripts_path = newPath
+				self.d.scripts_path.set(newPath)
 				self.searchScriptsDirectory(newPath)
 		self.rememberLast = self.d.remember_count.get()
 		self.searchLocal = self.d.local_search_checkbox.get()
